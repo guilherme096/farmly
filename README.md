@@ -17,6 +17,7 @@
   - [NPM](#npm)
   - [Tailwindcss/DaisyUI](#tailwindcssdaisyui)
     - [Tailwindcss](#tailwindcss)
+      - [CSS vs tailwind example:](#css-vs-tailwind-example)
     - [DaisyUI](#daisyui)
 
 
@@ -144,7 +145,7 @@ Node is used by astro to run the project, and the packages are installed with np
 Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.
 Basically for every css property in css, you have a class in tailwind. So instead of writing a lot of css, you just add classes to the element.
 - [Here are the docs](https://tailwindcss.com/docs)
-####CSS vs tailwind example:
+#### CSS vs tailwind example:
 With css styling:
 `````
 <style>
