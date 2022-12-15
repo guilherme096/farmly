@@ -2,12 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 export const CompleteNav = () => {
     return (<div className="navbar bg-base-100 h-20 flex flex-row p-0 align-middle px-3">
-        <div className="w-fit mr-8 h-20 shrink-0">
+        <a className="w-fit mr-8 h-20 shrink-0" href="/explore">
             <img src="/icons/farmly_black.svg" alt="" className="h-20" />
-        </div>
+        </a>
         <div className="form-control w-full flex flex-row">
             <input type="text" placeholder="Search" className="input input-bordered w-full  rounded-r-none" />
-            <button className="btn bg-black  rounded-l-none border-l-0 text-white">
+            <button className="btn bg-primary-focus  rounded-l-none border-l-0 text-white">
             <FontAwesomeIcon icon={faMagnifyingGlass} className='text-white h-4 w-4'/>
             </button>
         </div>
