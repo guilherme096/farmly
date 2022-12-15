@@ -31,8 +31,8 @@ export const CompleteNav = () => {
             </div>
             <div class="hidden lg:flex w-fit mr-auto">
                 <ul class="menu menu-horizontal px-1">
-                    <li class="px-2"><a>Explore</a></li>
                     <li class="px-2"><a>About us</a></li>
+                    <li class="px-2"><a>Orders</a></li>
                 </ul>
             </div>
             <button className="btn btn-primary btn-outline ml-auto">Become a seller</button>
