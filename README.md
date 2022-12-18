@@ -6,7 +6,7 @@
 - [Stack](#stack)
 - [Getting Started](#getting-started)
   - [To run the project locally](#to-run-the-project-locally)
-- [How this shit works](#how-this-shit-works)
+- [How this works](#how-this-works)
   - [TypeScript](#typescript)
   - [Directories and Files](#directories-and-files)
   - [Astro](#astro)
@@ -50,7 +50,7 @@ To stop the app press ctrl + c
 <br>
 
 
-# How this shit works
+# How this works
 ## TypeScript
 TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It is like javascript but you can define types that prevent type errors. ***In this project it will be on relaxed mode, so it will be like javascript files, but if you see typescript you know what is is***.
 ## Directories and Files
