@@ -2,18 +2,18 @@
 import ItemCard from "../components/ItemCard.astro";
 import ProductModal from "../components/ProductModal.astro";
 import { SideBarFilter } from "../components/SideBarFilter";
-import Page from "../layout/Page.astro"
+import Page from "../layout/Page.astro";
+import data from '../globalData.json'
+
+const { products } = data;
 ---
 
 <Page type='complete' title="Explore - Farmly">
     <ProductModal/>
     <SideBarFilter/>
     <div class="flex flex-row flex-wrap ml-80 mt-4">
-        <ItemCard/>
-        <ItemCard/>
-        <ItemCard/>
-        <ItemCard/>
-        <ItemCard/>
-        <ItemCard/>
+        {products.map((product) => (
+            <ItemCard product={product}/>
+        ))}
     </div>
 </Page>

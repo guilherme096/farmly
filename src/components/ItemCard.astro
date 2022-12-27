@@ -1,16 +1,20 @@
+---
+const { product } = Astro.props;
+---
+
 <label class="card bg-base-96 m-4 shadow-xl w-80" for="product-modal">
   <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div class="flex flex-col p-4">
     <div class="flex flex-row w-full">
       <div class="flex-start mr-4">
         <div class="avatar">
-          <div class="w-10 h-10 rounded-full">
+          <div class="w-12 h-12 rounded-full">
             <img src="https://placeimg.com/192/192/people" />
           </div>
         </div>
       </div>
       <div class="flex flex-col h-full justify-between mb-4">
-        <div class="text-md">José António</div>
+        <div class="text-md">{product.producer}</div>
         <div class="rating h-4">
           <input
             type="radio"
@@ -42,12 +46,18 @@
       </div>
     </div>
     <div class="flex flex-row justify-between">
-      <div class="text-lg">Cabbages</div>
-      <div class="text-lg">5.00€</div>
+      <div class="text-lg">{product.name}</div>
+      <div class="text-lg">{product.price}€</div>
     </div>
-    <div class="flex flex-row-reverse mt-3">
-      <div class="badge badge-outline badge-warning ml-1">5 star</div>
-      <div class="badge badge-outline badge-info mx-1">Veteran</div>
+    <div class="flex flex-row-reverse mt-4">
+      <div class="badge badge-outline badge-warning ml-1">{product.tags[0]}</div>
+      {
+        product.tags.map((tag, index) => {
+          if (index > 0) {
+            return <div class="badge badge-outline badge-warning ml-1">{tag}</div>
+          }
+        })
+      }
       </div>
   </div>
 </label>
