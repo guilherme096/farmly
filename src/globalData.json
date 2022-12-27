@@ -30,5 +30,67 @@
                 "veteran"
             ]
         }
+    ],
+    "users": [
+        {
+            "id": 0,
+            "name": "user1",
+            "email": "user1@gmail.com",
+            "password": "123456"
+        }
+    ],
+    "producers": [
+        {
+            "id": 0,
+            "name": "José António",
+            "email": "joseantonio@gmail.com",
+            "password": "123456",
+            "products":[
+                {
+                    "id": 0,
+                    "name": "Cabbage",
+                    "price": "1.5",
+                    "tags": [
+                        "veteran",
+                        "5 stars"
+                    ]
+                }
+            ]
+        
+        },
+        {
+            "id": 1,
+            "name": "Maria Santos",
+            "email": "mariasantos@gmail.com",
+            "password": "123456",
+            "products":[
+                {
+                    "id": 1,
+                    "name": "Organic Tomatoes",
+                    "price": "3.50",
+                    "tags": [
+                        "organic",
+                        "5 stars"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "John Doe",
+            "email": "johndoe@gmail.com",
+            "password": "123456",
+            "products":[
+                {
+                    "id": 2,
+                    "name": "Grass-Fed Beef",
+                    "price": "12.99",
+                    "tags": [
+                        "grass-fed",
+                        "veteran"
+                    ]
+                }
+            ]
+        }
     ]
 }
