@@ -4,18 +4,21 @@
             "id": 0,
             "producer": 0,
             "name": "Cabbage",
+            "image": "https://images.unsplash.com/photo-1598030343246-eec71cb44231?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FiYmFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
             "price": "1.5"
         },
         {
             "id": 1,
             "producer": 1,
             "name": "Organic Tomatoes",
+            "image": "https://images.unsplash.com/photo-1597160308671-bb9ec5348ae3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHRvbWF0b2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
             "price": "3.50"
         },
         {
             "id": 2,
             "producer": 2,
-            "name": "Grass-Fed Beef",
+            "name": "Carrots",
+            "image": "https://images.unsplash.com/photo-1447175008436-054170c2e979?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2Fycm90c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
             "price": "12.99"
         }
     ],
