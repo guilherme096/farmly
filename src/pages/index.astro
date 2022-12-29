@@ -3,29 +3,90 @@ import SignupModal from "../components/SignupModal.astro";
 import Page from "../layout/Page.astro";
 ---
 
-<Page type='simple' title="Farmly">
+<Page type="simple" title="Farmly">
+    <script>
+        import { loginUser } from "../utils/authenticationHelper.js";
+        document
+            .getElementById("login-form")
+            .addEventListener("submit", validateForm);
+        function validateForm(e) {
+            e.preventDefault();
+            var email = document.getElementById("email") as HTMLInputElement;
+            var password = document.getElementById(
+                "password"
+            ) as HTMLInputElement;
+            var emailVal = validateEmail(email);
+            var passwordVal = validatePassword(password);
+            if (emailVal && passwordVal) {
+                var credError = document.getElementById(
+                        "cred-error"
+                    ) as HTMLLabelElement;
+                if (loginUser(email.value, password.value)){
+                    console.log("correct");
+                    credError.classList.add("hidden");
+                    window.location.href = "/explore";
+                }
+                else {
+                    console.log("wrong");
+                    credError.classList.remove("hidden");
+                };
+            }
+        }
+
+        function validateEmail(email) {
+            var emailError = document.getElementById(
+                    "email-error"
+                ) as HTMLLabelElement;
+            if (email.value === "") {
+                email.classList.add("border-error");
+                emailError.classList.remove("hidden");
+                return false;
+            } else {
+                email.classList.remove("border-error");
+                emailError.classList.add("hidden");
+                return true;
+            }
+        }
+
+        function validatePassword(password) {
+            var passwordError = document.getElementById(
+                    "password-error"
+                ) as HTMLLabelElement;
+            if (password.value === "") {
+                password.classList.add("border-error");
+                passwordError.classList.remove("hidden");
+                return false;
+            } else {
+                password.classList.remove("border-error");
+                passwordError.classList.add("hidden");
+                return true;
+            }
+        }
+    </script>
     <div class="hero min-h-screen bg-landing bg-center bg-cover">
-        <div class="hero-content flex-col lg:flex-row lg:justify-between overflow-clip w-full mx-40">
+        <div
+            class="hero-content flex-col lg:flex-row lg:justify-between overflow-clip w-full mx-40"
+        >
             <div
                 class="absolute left-0 w-[1000px] h-[500px] bg-black bg-opacity-30 rounded-full -translate-x-1/3 blur-3xl"
             >
             </div>
-            <div class="text-center lg:text-left z-10 mb-14">  
+            <div class="text-center lg:text-left z-10 mb-14">
                 <div class="relative inline-block">
                     <h1 class="text-8xl font-bold text-primary inline">
                         Farm
                     </h1><h1 class="text-8xl font-bold text-[#5e4628] inline">
-                    ly
+                        ly
                     </h1>
                 </div>
                 <p class="py-6 text-white">
-                    Experience the taste of the countryside <br> with Farmly
+                    Experience the taste of the countryside <br /> with Farmly
                 </p>
             </div>
             <div
                 class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
             >
-                <div class="card-body">
+                <form class="card-body" action="/explore" id="login-form">
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Email</span>
@@ -34,7 +95,13 @@ import Page from "../layout/Page.astro";
                             type="text"
                             placeholder="email"
                             class="input input-bordered"
+                            id="email"
                         />
+                        <label id="email-error" class="label hidden"
+                            ><span class="label-text-alt text-error"
+                                >Email is required</span
+                            >
+                        </label>
                     </div>
                     <div class="form-control">
                         <label class="label">
@@ -44,18 +111,37 @@ import Page from "../layout/Page.astro";
                             type="password"
                             placeholder="password"
                             class="input input-bordered"
+                            id="password"
                         />
+                        <label id="password-error" class="label hidden"
+                            ><span class="label-text-alt text-error"
+                                >Password is required</span
+                            >
+                        </label>
                         <label class="label">
                             <a href="#" class="label-text-alt link link-hover"
                                 >Forgot password?</a
                             >
                         </label>
+                        <label id="cred-error" class="label hidden"
+                        ><span class="label-text-alt text-error"
+                            >Email or password are wrong</span
+                        >
+                    </label>
                     </div>
                     <div class="form-control mt-6">
-                        <button class="btn btn-primary">Login</button>
-                        <label for="my-modal" class="link-primary underline text-center mt-4 cursor-pointer hover:scale-105 transition-all duration-200">Sign up</label>
+                        <input
+                            class="btn btn-primary"
+                            type="submit"
+                            value="Log in"
+                        />
+                        <label
+                            for="my-modal"
+                            class="link-primary underline text-center mt-4 cursor-pointer hover:scale-105 transition-all duration-200"
+                            >Sign up</label
+                        >
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -6,18 +6,9 @@
 - [Stack](#stack)
 - [Getting Started](#getting-started)
   - [To run the project locally](#to-run-the-project-locally)
-- [How this works](#how-this-works)
-  - [TypeScript](#typescript)
-  - [Directories and Files](#directories-and-files)
-  - [Astro](#astro)
-    - [Astro components](#astro-components)
-    - [Astro layouts](#astro-layouts)
-      - [Example](#example)
-    - [Astro pages](#astro-pages)
-  - [NPM](#npm)
-  - [Tailwindcss/DaisyUI](#tailwindcssdaisyui)
-    - [Tailwindcss](#tailwindcss)
-      - [CSS vs tailwind example:](#css-vs-tailwind-example)
+  - [Test Credentials](#test-credentials)
+  - [const { title } = Astro.props](#const--title---astroprops)
+  - [import MySiteLayout from '../layouts/MySiteLayout.astro';](#import-mysitelayout-from-layoutsmysitelayoutastro)
     - [DaisyUI](#daisyui)
 
 
@@ -49,6 +40,37 @@ npm run dev
 To stop the app press ctrl + c
 <br>
 
+## Test Credentials
+
+Users
+`````
+        {
+            "id": 0,
+            "name": "user1",
+            "email": "user1@gmail.com",
+            "password": "123456"
+        }
+`````
+Sellers
+`````
+       {
+            "id": 0,
+            "name": "José António",
+            "email": "joseantonio@gmail.com",
+            "password": "123456",
+        },
+        {
+            "id": 1,
+            "name": "Maria Santos",
+            "email": "mariasantos@gmail.com",
+            "password": "123456",
+        },
+        {
+            "id": 2,
+            "name": "John Doe",
+            "email": "johndoe@gmail.com",
+            "password": "123456",
+        }
 
 # How this works
 ## TypeScript
