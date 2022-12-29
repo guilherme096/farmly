@@ -1,4 +1,4 @@
-import { ShoppingCartItem } from "./ShoppingCartItem"
+import { ItemAmountPicker } from "./ItemAmountPicker"
 export const CartModal = () => {
     return <><input type="checkbox" id="cart-modal" className="modal-toggle" />
         <div className="modal">
@@ -8,13 +8,13 @@ export const CartModal = () => {
                 <div className="card-body mt-14 mx-0 p-6">
                     <div className="w-full min-h-24 max-h-56 text-gray-400 flex flex-col align-middle scroll-auto overflow-scroll">
                         {/* <div className="text-center text-lg">Cart is empty</div> */}
-                        <ShoppingCartItem/>
-                        <ShoppingCartItem/>
-                        <ShoppingCartItem/>
-                        <ShoppingCartItem/>
-                        <ShoppingCartItem/>
-                        <ShoppingCartItem/>
-                        <ShoppingCartItem/>
+                        <ItemAmountPicker/>
+                        <ItemAmountPicker/>
+                        <ItemAmountPicker/>
+                        <ItemAmountPicker/>
+                        <ItemAmountPicker/>
+                        <ItemAmountPicker/>
+                        <ItemAmountPicker/>
                     </div>
                     <div className='m-auto border rounded-lg py-2 flex flex-col w-full px-4'>
                         <div className="my-1 w-full flex flex-row justify-between">
