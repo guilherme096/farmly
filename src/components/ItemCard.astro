@@ -10,7 +10,7 @@ const { product } = Astro.props;
       <div class="flex-start mr-4">
         <div class="avatar">
           <div class="w-12 h-12 rounded-full">
-            <img src="https://placeimg.com/192/192/people" />
+            <img src={product.producer.picture} />
           </div>
         </div>
       </div>
