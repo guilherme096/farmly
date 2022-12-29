@@ -4,7 +4,7 @@ export const CartModal = () => {
         <div className="modal">
             <div className="card flex-shrink-0 shadow-2xl bg-base-100 w-[600px] h-fit">
                 <div className="text-primary left-6 top-6 absolute font-bold text-xl">Shopping Cart</div>
-                <label for="cart-modal" class="btn btn-sm btn-circle absolute right-6 top-6">✕</label>
+                <label htmlFor="cart-modal" className="btn btn-sm btn-circle absolute right-6 top-6">✕</label>
                 <div className="card-body mt-14 mx-0 p-6">
                     <div className="w-full min-h-24 max-h-56 text-gray-400 flex flex-col align-middle scroll-auto overflow-scroll">
                         {/* <div className="text-center text-lg">Cart is empty</div> */}

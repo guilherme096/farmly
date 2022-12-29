@@ -1,64 +1,71 @@
 ---
+import ProductModal from "./ProductModal.astro";
+
 const { product } = Astro.props;
 // console log every property in product
 ---
 
-<label class="card bg-base-96 m-4 shadow-xl w-80" for="product-modal">
-  <figure><img src={product.image} class="h-[180px] object-cover w-full"/></figure>
-  <div class="flex flex-col p-4">
-    <div class="flex flex-row w-full">
-      <div class="flex-start mr-4">
-        <div class="avatar">
-          <div class="w-12 h-12 rounded-full">
-            <img src={product.producer.picture} />
+<>
+  <label class="card bg-base-96 m-4 shadow-xl w-80" for={"product-modal-" + product.id.toString()}>
+    <figure>
+      <img src={product.image} class="h-[180px] object-cover w-full" />
+    </figure>
+    <div class="flex flex-col p-4">
+      <div class="flex flex-row w-full">
+        <div class="flex-start mr-4">
+          <div class="avatar">
+            <div class="w-12 h-12 rounded-full">
+              <img src={product.producer.picture} />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col h-full justify-between mb-4">
+          <div class="text-md">{product.producer.name}</div>
+          <div class="rating h-4">
+            <input
+              type="radio"
+              name="rating-1"
+              class="mask mask-star bg-yellow-400 max-h-full"
+            />
+            <input
+              type="radio"
+              name="rating-1"
+              class="mask mask-star bg-yellow-400 max-h-full"
+            />
+            <input
+              type="radio"
+              name="rating-1"
+              class="mask mask-star bg-yellow-400 max-h-full"
+            />
+            <input
+              type="radio"
+              name="rating-1"
+              class="mask mask-star bg-yellow-400 max-h-full"
+              checked
+            />
+            <input
+              type="radio"
+              name="rating-1"
+              class="mask mask-star bg-yellow-400 max-h-full"
+            />
           </div>
         </div>
       </div>
-      <div class="flex flex-col h-full justify-between mb-4">
-        <div class="text-md">{product.producer.name}</div>
-        <div class="rating h-4">
-          <input
-            type="radio"
-            name="rating-1"
-            class="mask mask-star bg-yellow-400 max-h-full"
-          />
-          <input
-            type="radio"
-            name="rating-1"
-            class="mask mask-star bg-yellow-400 max-h-full"
-          />
-          <input
-            type="radio"
-            name="rating-1"
-            class="mask mask-star bg-yellow-400 max-h-full"
-          />
-          <input
-            type="radio"
-            name="rating-1"
-            class="mask mask-star bg-yellow-400 max-h-full"
-            checked
-          />
-          <input
-            type="radio"
-            name="rating-1"
-            class="mask mask-star bg-yellow-400 max-h-full"
-          />
-        </div>
+      <div class="flex flex-row justify-between">
+        <div class="text-lg">{product.name}</div>
+        <div class="text-lg">{product.price}€</div>
+      </div>
+      <div class="flex flex-row-reverse mt-4">
+        {
+          product.producer.tags.map((tag, index) => {
+              var style = " badge badge-outline ml-1 badge-" + tag.color + "";
+              return (
+                <div class={style}>{tag.name}</div>
+              );
+          })
+        }
       </div>
     </div>
-    <div class="flex flex-row justify-between">
-      <div class="text-lg">{product.name}</div>
-      <div class="text-lg">{product.price}€</div>
-    </div>
-    <div class="flex flex-row-reverse mt-4">
-      <div class="badge badge-outline badge-warning ml-1">{product.producer.tags[0]}</div>
-      {
-        product.producer.tags.map((tag, index) => {
-          if (index > 0) {
-            return <div class="badge badge-outline badge-warning ml-1">{tag}</div>
-          }
-        })
-      }
-      </div>
-  </div>
-</label>
+  </label>
+  <ProductModal product={product}/>
+</>
