@@ -3,8 +3,8 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons"
 export const ShoppingCartItem = () => <div className="card w-full bg-base-100 mx-auto my-auto flex flex-row justify-between h-24 px-4 my-4">
     <div className="flex flex-row align-middle">
-        <div class="avatar my-auto w-auto h-20">
-            <div class="h-20 rounded-xl ">
+        <div className="avatar my-auto w-auto h-20">
+            <div className="h-20 rounded-xl ">
                 <img src="https://placeimg.com/192/192/people" />
             </div>
         </div>
@@ -14,8 +14,8 @@ export const ShoppingCartItem = () => <div className="card w-full bg-base-100 mx
         </div>
     </div>
     <div className="dropdown my-auto p-0 ">
-        <label tabindex="0" className="btn btn-primary text-lg">0<FontAwesomeIcon icon={faCaretDown} className='h-4 w-4 text-{D9D9D9}' /></label>
-        <ul tabindex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <label tabIndex="0" className="btn btn-primary text-lg">0<FontAwesomeIcon icon={faCaretDown} className='h-4 w-4 text-{D9D9D9}' /></label>
+        <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
             <li><a>01</a></li>
             <li><a>02</a></li>
             <li><a>03</a></li>

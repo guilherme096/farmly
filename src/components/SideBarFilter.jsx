@@ -10,8 +10,8 @@ export const SideBarFilter = () => {
             </div>
             <div>
                 <div className="dropdown p-0 my-auto mt-8 mb-4 ">
-                    <label tabindex="0" className="btn btn-outline btn-primary w-52">Origin<FontAwesomeIcon icon={faCaretDown} className='h-4 w-4' /></label>
-                    <ul tabindex="" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <label tabIndex="0" className="btn btn-outline btn-primary w-52">Origin<FontAwesomeIcon icon={faCaretDown} className='h-4 w-4' /></label>
+                    <ul tabIndex="" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a></a></li>
                         <li><a></a></li>
                         <li><a></a></li>
@@ -21,8 +21,8 @@ export const SideBarFilter = () => {
                 </div>
                 <br />
                 <div className="dropdown my-auto p-0 mt-4 mb-4">
-                    <label tabindex="0" className="btn btn-outline btn-primary w-52">Budget<FontAwesomeIcon icon={faCaretDown} className='h-4 w-4' /></label>
-                    <ul tabindex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <label tabIndex="0" className="btn btn-outline btn-primary w-52">Budget<FontAwesomeIcon icon={faCaretDown} className='h-4 w-4' /></label>
+                    <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a></a></li>
                         <li><a></a></li>
                         <li><a></a></li>
@@ -32,8 +32,8 @@ export const SideBarFilter = () => {
                 </div>
                 <br />
                 <div className="dropdown my-auto p-0 mt-4">
-                    <label tabindex="0" className="btn btn-outline btn-primary w-52">Service Options<FontAwesomeIcon icon={faCaretDown} className='h-4 w-4' /></label>
-                    <ul tabindex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <label tabIndex="0" className="btn btn-outline btn-primary w-52">Service Options<FontAwesomeIcon icon={faCaretDown} className='h-4 w-4' /></label>
+                    <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a></a></li>
                         <li><a></a></li>
                         <li><a></a></li>
