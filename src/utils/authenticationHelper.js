@@ -12,5 +12,8 @@ export const loginUser = (email, password) => {
 
 export const checkAuth = () => {
     const user = localStorage.getItem('currentUser')
-    return !!user
+    if (user) {
+        return true
+    }
+    return false
 }
