@@ -1,5 +1,6 @@
 ---
 const { product } = Astro.props;
+// console log every property in product
 ---
 
 <label class="card bg-base-96 m-4 shadow-xl w-80" for="product-modal">
@@ -14,7 +15,7 @@ const { product } = Astro.props;
         </div>
       </div>
       <div class="flex flex-col h-full justify-between mb-4">
-        <div class="text-md">{product.producer}</div>
+        <div class="text-md">{product.producer.name}</div>
         <div class="rating h-4">
           <input
             type="radio"
@@ -50,9 +51,9 @@ const { product } = Astro.props;
       <div class="text-lg">{product.price}€</div>
     </div>
     <div class="flex flex-row-reverse mt-4">
-      <div class="badge badge-outline badge-warning ml-1">{product.tags[0]}</div>
+      <div class="badge badge-outline badge-warning ml-1">{product.producer.tags[0]}</div>
       {
-        product.tags.map((tag, index) => {
+        product.producer.tags.map((tag, index) => {
           if (index > 0) {
             return <div class="badge badge-outline badge-warning ml-1">{tag}</div>
           }

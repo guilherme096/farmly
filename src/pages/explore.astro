@@ -12,8 +12,16 @@ const { products } = data;
     <ProductModal/>
     <SideBarFilter/>
     <div class="flex flex-row flex-wrap ml-80 mt-4">
-        {products.map((product) => (
-            <ItemCard product={product}/>
-        ))}
+        {products.map((product) => {
+            var _product = {
+                ...product,
+                producer: {}
+            };
+            _product.id = product.id;
+            _product.name = product.name;
+            _product.price = product.price;
+            _product.producer = data.producers.find((producer) => producer.id === product.producer);
+            return <ItemCard product={_product}/>
+        })}
     </div>
 </Page>
