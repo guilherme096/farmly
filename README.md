@@ -7,8 +7,18 @@
 - [Getting Started](#getting-started)
   - [To run the project locally](#to-run-the-project-locally)
   - [Test Credentials](#test-credentials)
-  - [const { title } = Astro.props](#const--title---astroprops)
-  - [import MySiteLayout from '../layouts/MySiteLayout.astro';](#import-mysitelayout-from-layoutsmysitelayoutastro)
+- [How this works](#how-this-works)
+  - [TypeScript](#typescript)
+  - [Directories and Files](#directories-and-files)
+  - [Astro](#astro)
+    - [Astro components](#astro-components)
+    - [Astro layouts](#astro-layouts)
+      - [Example](#example)
+    - [Astro pages](#astro-pages)
+  - [NPM](#npm)
+  - [Tailwindcss/DaisyUI](#tailwindcssdaisyui)
+    - [Tailwindcss](#tailwindcss)
+      - [CSS vs tailwind example:](#css-vs-tailwind-example)
     - [DaisyUI](#daisyui)
 
 
@@ -71,7 +81,7 @@ Sellers
             "email": "johndoe@gmail.com",
             "password": "123456",
         }
-
+`````
 # How this works
 ## TypeScript
 TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It is like javascript but you can define types that prevent type errors. ***In this project it will be on relaxed mode, so it will be like javascript files, but if you see typescript you know what is is***.
