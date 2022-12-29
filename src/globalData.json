@@ -42,13 +42,18 @@
             "password": "123456",
             "picture": "https://media.istockphoto.com/id/904559680/pt/foto/this-farm-is-my-pride-and-joy.jpg?s=612x612&w=0&k=20&c=KfyDNCvdoVkvvE2LXinc80eeE6qaKt1BRLTxadlPyNY=",
             "tags": [
-                "veteran",
-                "5 stars"
+                {
+                    "name": "Veteran",
+                    "color": "error"
+                },
+                {
+                    "name": "5 stars",
+                    "color": "warning"
+                }
             ],
-            "products":[
+            "products": [
                 0
             ]
-        
         },
         {
             "id": 1,
@@ -57,10 +62,16 @@
             "password": "123456",
             "picture": "https://media.istockphoto.com/id/832988308/pt/foto/living-with-nature-right-on-my-doorstep.jpg?s=612x612&w=0&k=20&c=cvHEX4lRsx5GLLq9yqxqUoVe-_5W1CnJx7Zr-wSy72I=",
             "tags": [
-                "organic",
-                "5 stars"
+                {
+                    "name": "Rising Star",
+                    "color": "accent"
+                },
+                {
+                    "name": "5 stars",
+                    "color": "warning"
+                }
             ],
-            "products":[
+            "products": [
                 1
             ]
         },
@@ -71,10 +82,12 @@
             "password": "123456",
             "picture": "https://media.istockphoto.com/id/694409158/pt/foto/time-to-get-my-harvest-on.jpg?s=612x612&w=0&k=20&c=8g-7O1OqpCGvFNFFoUnjw7XwgWeqy1Q3peZyiauPnCU=",
             "tags": [
-                "grass-fed",
-                "veteran"
+                {
+                    "name": "Joined Recently",
+                    "color": "primary"
+                }
             ],
-            "products":[
+            "products": [
                 2
             ]
         }

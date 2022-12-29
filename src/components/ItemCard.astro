@@ -56,16 +56,12 @@ const { product } = Astro.props;
         <div class="text-lg">{product.price}€</div>
       </div>
       <div class="flex flex-row-reverse mt-4">
-        <div class="badge badge-outline badge-warning ml-1">
-          {product.producer.tags[0]}
-        </div>
         {
           product.producer.tags.map((tag, index) => {
-            if (index > 0) {
+              var style = " badge badge-outline ml-1 badge-" + tag.color + "";
               return (
-                <div class="badge badge-outline badge-warning ml-1">{tag}</div>
+                <div class={style}>{tag.name}</div>
               );
-            }
           })
         }
       </div>
