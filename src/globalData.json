@@ -2,33 +2,21 @@
     "products": [
         {
             "id": 0,
-            "producer": "José António",
+            "producer": 0,
             "name": "Cabbage",
-            "price": "1.5",
-            "tags": [
-                "veteran",
-                "5 stars"
-            ]
+            "price": "1.5"
         },
         {
             "id": 1,
-            "producer": "Maria Santos",
+            "producer": 1,
             "name": "Organic Tomatoes",
-            "price": "3.50",
-            "tags": [
-                "organic",
-                "5 stars"
-            ]
+            "price": "3.50"
         },
         {
             "id": 2,
-            "producer": "John Doe",
+            "producer": 2,
             "name": "Grass-Fed Beef",
-            "price": "12.99",
-            "tags": [
-                "grass-fed",
-                "veteran"
-            ]
+            "price": "12.99"
         }
     ],
     "users": [
@@ -36,7 +24,8 @@
             "id": 0,
             "name": "user1",
             "email": "user1@gmail.com",
-            "password": "123456"
+            "password": "123456",
+            "picture": "https://media.istockphoto.com/id/1137851574/pt/foto/profile-of-young-womans-face.jpg?s=612x612&w=0&k=20&c=_eTQeImRFqbMXaHx6zEfLmlnkPhsci_4M9ZrDbm9sHc="
         }
     ],
     "producers": [
@@ -45,16 +34,13 @@
             "name": "José António",
             "email": "joseantonio@gmail.com",
             "password": "123456",
+            "picture": "https://media.istockphoto.com/id/904559680/pt/foto/this-farm-is-my-pride-and-joy.jpg?s=612x612&w=0&k=20&c=KfyDNCvdoVkvvE2LXinc80eeE6qaKt1BRLTxadlPyNY=",
+            "tags": [
+                "veteran",
+                "5 stars"
+            ],
             "products":[
-                {
-                    "id": 0,
-                    "name": "Cabbage",
-                    "price": "1.5",
-                    "tags": [
-                        "veteran",
-                        "5 stars"
-                    ]
-                }
+                0
             ]
         
         },
@@ -63,16 +49,13 @@
             "name": "Maria Santos",
             "email": "mariasantos@gmail.com",
             "password": "123456",
+            "picture": "https://media.istockphoto.com/id/832988308/pt/foto/living-with-nature-right-on-my-doorstep.jpg?s=612x612&w=0&k=20&c=cvHEX4lRsx5GLLq9yqxqUoVe-_5W1CnJx7Zr-wSy72I=",
+            "tags": [
+                "organic",
+                "5 stars"
+            ],
             "products":[
-                {
-                    "id": 1,
-                    "name": "Organic Tomatoes",
-                    "price": "3.50",
-                    "tags": [
-                        "organic",
-                        "5 stars"
-                    ]
-                }
+                1
             ]
         },
         {
@@ -80,16 +63,13 @@
             "name": "John Doe",
             "email": "johndoe@gmail.com",
             "password": "123456",
+            "picture": "https://media.istockphoto.com/id/694409158/pt/foto/time-to-get-my-harvest-on.jpg?s=612x612&w=0&k=20&c=8g-7O1OqpCGvFNFFoUnjw7XwgWeqy1Q3peZyiauPnCU=",
+            "tags": [
+                "grass-fed",
+                "veteran"
+            ],
             "products":[
-                {
-                    "id": 2,
-                    "name": "Grass-Fed Beef",
-                    "price": "12.99",
-                    "tags": [
-                        "grass-fed",
-                        "veteran"
-                    ]
-                }
+                2
             ]
         }
     ]
