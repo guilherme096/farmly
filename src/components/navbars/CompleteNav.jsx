@@ -1,7 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
-import {CartModal}  from '../CartModal.jsx'
+import { CartModal } from '../CartModal.jsx'
+import { useEffect, useState } from "react"
+import { checkAuth, getUser } from "../../utils/authenticationHelper.js"
 export const CompleteNav = () => {
+    const [authed, setAuthed] = useState(checkAuth());
+    const [user, setUser] = useState(null);
+    useEffect(() => {
+        if (authed) {
+            setUser(getUser());
+        }
+    }, [authed])
     return (<div className="navbar bg-base-100 h-20 flex flex-row p-0 align-middle px-3">
         <a className="w-fit mr-8 h-20 shrink-0" href="/explore">
             <img src="/icons/farmly_black.svg" alt="" className="h-20" />
@@ -28,10 +37,10 @@ export const CompleteNav = () => {
                 </ul>
             </div>
             <button className="btn btn-primary btn-outline ml-auto">Become a seller</button>
-            <div className="dropdown dropdown-end ml-8">
+            {authed && user ? <div className="dropdown dropdown-end ml-8">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-12 rounded-full">
-                        <img src="https://placeimg.com/80/80/people" />
+                        <img src={user.picture} />
                     </div>
                 </label>
                 <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
@@ -44,8 +53,8 @@ export const CompleteNav = () => {
                     <li><a>Settings</a></li>
                     <li><a>Logout</a></li>
                 </ul>
-            </div>
+            </div> : <button className="btn btn-primary ml-auto w-32">Login</button>}
         </div>
-        <CartModal/>
+        <CartModal />
     </div>)
 }

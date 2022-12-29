@@ -11,9 +11,18 @@ export const loginUser = (email, password) => {
 }
 
 export const checkAuth = () => {
-    const user = localStorage.getItem('currentUser')
+    const user = localStorage.getItem('currentUser');
+    console.log(user + ' from checkAuth')
     if (user) {
         return true
     }
     return false
+}
+
+export const getUser = () => {
+    const user = localStorage.getItem('currentUser');
+    if (user) {
+        return JSON.parse(user)
+    }
+    return null
 }
