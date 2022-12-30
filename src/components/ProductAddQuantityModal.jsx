@@ -2,9 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
+import { addItemToCart } from "../utils/buyHelper"
 
 export const ProductAddQuantityModal = (props) => {
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(1);
+    const addItemsToCart = (amount) => {
+        addItemToCart(props.product, amount);
+    }
     return (<>
         <input type="checkbox" id={"product-amount-" + props.product.id.toString()} className="modal-toggle" />
         <label className="modal cursor-pointer" id={"product-amount-" + props.product.id.toString()} htmlFor={"product-amount-" + props.product.id.toString()}>
@@ -33,7 +37,7 @@ export const ProductAddQuantityModal = (props) => {
                     </div>
                     <div className="text text-xl my-auto">{props.product.price}€</div>
                 </div>
-                <label className="btn btn-primary mx-auto px-6 w-full mt-auto" htmlFor={"product-amount-" + props.product.id.toString()} > Add to cart</label>
+                <label className="btn btn-primary mx-auto px-6 w-full mt-auto" htmlFor={"product-amount-" + props.product.id.toString()} onClick={()=>addItemsToCart(props.product,count)}> Add to cart</label>
             </label>
         </label>
     </>);

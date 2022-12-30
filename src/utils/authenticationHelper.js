@@ -4,7 +4,11 @@ export const loginUser = (email, password) => {
     // check if params are in user from globalData and store logged in user in local storage
     const user = globalData.users.find(user => user.email === email && user.password === password)
     if (user) {
-        localStorage.setItem('currentUser', JSON.stringify(user))
+        var _user = {
+            ...user,
+            cart: []
+        }
+        localStorage.setItem('currentUser', JSON.stringify(_user))
         return true
     }
     return false
@@ -12,7 +16,6 @@ export const loginUser = (email, password) => {
 
 export const checkAuth = () => {
     const user = localStorage.getItem('currentUser');
-    console.log(user + ' from checkAuth')
     if (user) {
         return true
     }
