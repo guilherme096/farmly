@@ -1,9 +1,11 @@
 ---
+import { ProductAddQuantityModal } from "./ProductAddQuantityModal";
+
 const {product} = Astro.props;
 ---
 <>
     <input type="checkbox" id={"product-modal-" + product.id.toString()} class="modal-toggle" />
-    <div class="modal" id="product-modal">
+    <div class="modal">
         <div
             class="card flex-shrink-0 w-[600px] shadow-2xl bg-base-100 h-fit pb-6"
         >
@@ -51,7 +53,8 @@ const {product} = Astro.props;
                     </div>
                 </div>
             </div>
-            <div class="btn btn-primary w-fit mx-auto px-6"> Add to cart</div>
+            <label class="btn btn-primary w-fit mx-auto px-6" for={"product-amount-" + product.id.toString()} > Add to cart</label>
+            <ProductAddQuantityModal product={product} client:load/>
         </div>
     </div>
 </>

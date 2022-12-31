@@ -19,7 +19,7 @@ const { type, title } = Astro.props
     <title>{title}</title>
 </head>
 <body>
-    {type === "complete" ? <CompleteNav client:load/> : <SimpleNav/>}
+    {type === "complete" ? <CompleteNav client:only/> : <SimpleNav/>}
     <slot/>
 </body>
 </html>
