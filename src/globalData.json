@@ -1,0 +1,95 @@
+{
+    "products": [
+        {
+            "id": 0,
+            "producer": 0,
+            "name": "Cabbage",
+            "image": "https://images.unsplash.com/photo-1598030343246-eec71cb44231?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FiYmFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
+            "price": "1.5",
+            "description": "My cabbages are grown using sustainable practices and are known for their crisp texture and rich flavor."
+        },
+        {
+            "id": 1,
+            "producer": 1,
+            "name": "Organic Tomatoes",
+            "image": "https://images.unsplash.com/photo-1597160308671-bb9ec5348ae3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHRvbWF0b2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+            "price": "3.50",
+            "description": "My tomatoes are grown using sustainable practices and are known for their texture and rich flavor."
+        },
+        {
+            "id": 2,
+            "producer": 2,
+            "name": "Carrots",
+            "image": "https://images.unsplash.com/photo-1447175008436-054170c2e979?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2Fycm90c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60",
+            "price": "12.99",
+            "description": "My carrots are grown using sustainable practices and are known for their crisp texture and rich flavor."
+        }
+    ],
+    "users": [
+        {
+            "id": 0,
+            "name": "user1",
+            "email": "user1@gmail.com",
+            "password": "123456",
+            "picture": "https://media.istockphoto.com/id/1137851574/pt/foto/profile-of-young-womans-face.jpg?s=612x612&w=0&k=20&c=_eTQeImRFqbMXaHx6zEfLmlnkPhsci_4M9ZrDbm9sHc="
+        }
+    ],
+    "producers": [
+        {
+            "id": 0,
+            "name": "José António",
+            "email": "joseantonio@gmail.com",
+            "password": "123456",
+            "picture": "https://media.istockphoto.com/id/904559680/pt/foto/this-farm-is-my-pride-and-joy.jpg?s=612x612&w=0&k=20&c=KfyDNCvdoVkvvE2LXinc80eeE6qaKt1BRLTxadlPyNY=",
+            "tags": [
+                {
+                    "name": "Veteran",
+                    "color": "error"
+                },
+                {
+                    "name": "5 stars",
+                    "color": "warning"
+                }
+            ],
+            "products": [
+                0
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Maria Santos",
+            "email": "mariasantos@gmail.com",
+            "password": "123456",
+            "picture": "https://media.istockphoto.com/id/832988308/pt/foto/living-with-nature-right-on-my-doorstep.jpg?s=612x612&w=0&k=20&c=cvHEX4lRsx5GLLq9yqxqUoVe-_5W1CnJx7Zr-wSy72I=",
+            "tags": [
+                {
+                    "name": "Rising Star",
+                    "color": "accent"
+                },
+                {
+                    "name": "5 stars",
+                    "color": "warning"
+                }
+            ],
+            "products": [
+                1
+            ]
+        },
+        {
+            "id": 2,
+            "name": "John Doe",
+            "email": "johndoe@gmail.com",
+            "password": "123456",
+            "picture": "https://media.istockphoto.com/id/694409158/pt/foto/time-to-get-my-harvest-on.jpg?s=612x612&w=0&k=20&c=8g-7O1OqpCGvFNFFoUnjw7XwgWeqy1Q3peZyiauPnCU=",
+            "tags": [
+                {
+                    "name": "Joined Recently",
+                    "color": "primary"
+                }
+            ],
+            "products": [
+                2
+            ]
+        }
+    ]
+}

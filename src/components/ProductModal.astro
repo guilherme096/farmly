@@ -1,16 +1,21 @@
+---
+import { ProductAddQuantityModal } from "./ProductAddQuantityModal";
+
+const {product} = Astro.props;
+---
 <>
-    <input type="checkbox" id="product-modal" class="modal-toggle" />
-    <div class="modal" id="product-modal">
+    <input type="checkbox" id={"product-modal-" + product.id.toString()} class="modal-toggle" />
+    <div class="modal">
         <div
             class="card flex-shrink-0 w-[600px] shadow-2xl bg-base-100 h-fit pb-6"
         >
             <label
-                for="product-modal"
+                for={"product-modal-" + product.id.toString()}
                 class="btn btn-sm btn-circle absolute right-6 top-6">✕</label
             >
             <figure>
                 <img
-                    src="https://placeimg.com/400/225/arch"
+                    src={product.image}
                     alt="Shoes"
                     class="rounded-t-2xl w-full object-cover h-80"
                 />
@@ -21,13 +26,13 @@
                         <div class="avatar">
                             <div class="w-20 h-20 rounded-full">
                                 <img
-                                    src="https://placeimg.com/192/192/people"
+                                    src={product.producer.picture}
                                 />
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-col h-full justify-between py-4 mb-4">
-                        <div class="text-xl">José António</div>
+                        <div class="text-xl">{product.producer.name}</div>
                         <div class="rating">
                             <input type="radio" name="rating-1" class="mask mask-star bg-yellow-400" />
                             <input type="radio" name="rating-1" class="mask mask-star bg-yellow-400" />
@@ -39,20 +44,17 @@
                 </div>
                 <div class="flex flex-col w-full">
                     <div class="flex flex-row justify-between">
-                        <div class="text-2xl">Cabbages</div>
-                        <div class="text-2xl">€ 1.99</div>
+                        <div class="text-2xl">{product.name}</div>
+                        <div class="text-2xl">{product.price}€</div>
                     </div>
-                    <div class="text-lg font-bold mt-4 mb-1">Nutrutional Information</div>
+                    <div class="text-lg font-bold mt-4 mb-1">Description</div>
                     <div class="text-md">
-                        It contains high levels of vitamin C and vitamin K, as
-                        well as dietary fiber, folic acid, and manganese. One
-                        cup of chopped cabbage, which is about 89 grams,
-                        contains around 22 calories, 0 grams of fat, 5 grams of
-                        carbohydrates, and 1 gram of protein.
+                        {product.description}
                     </div>
                 </div>
             </div>
-            <div class="btn btn-primary w-fit mx-auto px-6"> Add to cart</div>
+            <label class="btn btn-primary w-fit mx-auto px-6" for={"product-amount-" + product.id.toString()} > Add to cart</label>
+            <ProductAddQuantityModal product={product} client:load/>
         </div>
     </div>
 </>

@@ -6,6 +6,7 @@
 - [Stack](#stack)
 - [Getting Started](#getting-started)
   - [To run the project locally](#to-run-the-project-locally)
+  - [Test Credentials](#test-credentials)
 - [How this works](#how-this-works)
   - [TypeScript](#typescript)
   - [Directories and Files](#directories-and-files)
@@ -49,7 +50,38 @@ npm run dev
 To stop the app press ctrl + c
 <br>
 
+## Test Credentials
 
+Users
+`````
+        {
+            "id": 0,
+            "name": "user1",
+            "email": "user1@gmail.com",
+            "password": "123456"
+        }
+`````
+Sellers
+`````
+       {
+            "id": 0,
+            "name": "José António",
+            "email": "joseantonio@gmail.com",
+            "password": "123456",
+        },
+        {
+            "id": 1,
+            "name": "Maria Santos",
+            "email": "mariasantos@gmail.com",
+            "password": "123456",
+        },
+        {
+            "id": 2,
+            "name": "John Doe",
+            "email": "johndoe@gmail.com",
+            "password": "123456",
+        }
+`````
 # How this works
 ## TypeScript
 TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It is like javascript but you can define types that prevent type errors. ***In this project it will be on relaxed mode, so it will be like javascript files, but if you see typescript you know what is is***.

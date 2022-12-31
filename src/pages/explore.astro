@@ -1,18 +1,26 @@
 ---
 import ItemCard from "../components/ItemCard.astro";
-import ModalCard from "../components/ModalCard.astro";
 import ProductModal from "../components/ProductModal.astro";
 import { SideBarFilter } from "../components/SideBarFilter";
-import Page from "../layout/Page.astro"
-import Settings from "../components/Settings.astro";
-import AddProduct from "../components/AddProduct.astro";
+import Page from "../layout/Page.astro";
+import data from '../globalData.json'
+
+const { products } = data;
 ---
 
-<Page type='complete'>
-    <ItemCard/>
-    <Settings/>
-    <label for="product-modal" class="btn">open modal</label>
-    <ProductModal/>
-    <AddProduct/>
+<Page type='complete' title="Explore - Farmly">
     <SideBarFilter/>
+    <div class="flex flex-row flex-wrap ml-80 mt-4">
+        {products.map((product) => {
+            var _product = {
+                ...product,
+                producer: {}
+            };
+            _product.id = product.id;
+            _product.name = product.name;
+            _product.price = product.price;
+            _product.producer = data.producers.find((producer) => producer.id === product.producer);
+            return <ItemCard product={_product}/>
+        })}
+    </div>
 </Page>
