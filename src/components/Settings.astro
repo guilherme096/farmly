@@ -1,0 +1,90 @@
+<!-- The button to open modal -->
+<label for="SetAccount" class="btn">Settings</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="SetAccount" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box w-11/12 max-w-5xl" style="height: 600px;">
+    <div class="h-full float-left bg-lime-900 ml-0">
+      <ul class="menu w-60">
+          <li class="mt-8 bg-white mb-0.5 border-lime-900"><a href="/Settings">
+            <img src="https://s3-alpha-sig.figma.com/img/7639/32fb/9009b35f6c64d6b4fdb5328599b7338c?Expires=1673222400&Signature=AH5FFQ9KbE6TzGl9sZQAEUEeqlnqkuod74Mcch5Zp6azVboGKm7Zh~xI~A8yxmoKTwJXVfalEbLO00uvYf-3x~HINILJJHStaSaijuUym7TczpI6wB5umDs2NRc6g7DCiZHcvfISTMqVK~Nlu59cVDqAmvT275jh~M0xv532impjcUaJA31vazl6CRf2Gq05QR6JfNVGNOF4CLX-42ji~M8AQX8DQ2u4-pin4oHP2RZSJoFMTOS3I9Xr8y7a8CVCwqimcAiKxLskTQIrXRmyQWBPiVRGFdw2Ps-P0Z4Aaz4IGBXDiF0ZQ9Ga-3I6jxHPbruV9VNdXwx89~f5lvGREA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="account" style="height: 30px; width: 30px; border-radius: 50%; border-color: black; border-width: 1px;">
+            Account
+          </a></li>
+          <li class="bg-white mb-0.5 border-lime-900"><a href="/SetPass">
+            <img src="https://s3-alpha-sig.figma.com/img/786b/7ba5/1c3358b56409af325f56e1df661caf72?Expires=1673222400&Signature=g7leI0ELoBCSifkt1s3bpNGQOfi3NlYi1MCmK34vuyTZBxOpoGjUIujm1ap5lzV18DFBfqmRSxuzPf4U1d13-lfHiFLnrGK-QdParGOhRUZ39YFyykRyzaZfk6CE8ScxF4aLOjC0qus4XPbkqbDV8NK5CbB7VGQGOfFRE09j9ifLk08tZ15NOWh0-0kDHwSvQlqbCj89DTpxB3me~j~SXMjBfnyuxCg3iQ8ffpnTspGYpIQApHW3ymnTKpm~v2M3RVNTJbaK-5Q8BQo29BIDBJx8Y0vMCUqXAEX0Im-wNu9ARMul5co0DHi45iJdGVf3peqYvQYJ7VReZahYo6dHaQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="password" style="height: 30px; width: 30px; border-radius: 50%; border-color: black; border-width: 1px;">
+            Password</a></li>
+          <li class="bg-white mb-0.5 border-lime-900"><a href="/SetBil">
+            <img src="https://s3-alpha-sig.figma.com/img/f2c1/f147/6082c0bc7190e74eecfec48a2b408890?Expires=1673222400&Signature=NZAA6xZR~8fRokW9WdoBYjBm-eoKnYC4PWSmlFI10GCYri0dAuMwh1vlH6uDDmxSj6Ix8psIdf2AhzGh4OuwOioEopB7v-pTLcW-5Eks~neSkxC1fy8kcKfcDd~XMPNxX-4PrOidI4e3Zrj82E9q9a~s1fkcxM2QpRLaJjaL4n~EohqB1n42iyoOCn-WJ7NZgCu8AZ5TvSj02APPrUfFoWuMFxTHwaL09DMyalBS36DqcG1DG1OA~wZJuvryPNAe7fMK8xrYMXEQESf1hp~F198xiJy9xXRNq~5kXCy4AlR5un1gCXdE~qnakT72WxGdE0deNED0xGjWFKY3Dc0YWg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="biling" style="height: 30px; width: 30px; border-radius: 50%; border-color: black; border-width: 1px;">
+            Billing</a></li>
+        </ul>
+      </div>
+    <div class="ml-64">
+      <h1 class="ml-3 font-extrabold text-3xl">Settings</h1>
+      <label for="SetAccount" class="btn btn-sm btn-circle absolute right-6 top-6">x</label>
+      <hr class="bg-lime-800 mt-2">
+    </div>
+
+    <div class="ml-64">
+      <div class="ml-3 mt-3">
+        <div class="row w-24">
+          <h1 class="font-bold text-xl mb-2">Account</h1>
+        </div>
+        <div class="row">
+          <div>
+            <div class="form-control m-auto">
+              <input type="button" style="border-radius: 50%; height: 80px; width: 80px; border-color: black; border-width: 1px; margin: auto;">
+              <button class="btn btn-primary text-xs w-36 m-auto mt-3" style="height: 10px; border-radius: 20px;">Change photo</button>
+          </div>
+          <div class="form-control float-left">
+            <label class="label w-14">
+                <span class="label-text">Name</span>
+            </label>
+            <input type="text" placeholder="Name" class="input input-bordered h-10 w-80"/>
+          
+          </div>
+          <div class="form-control float-left ml-6">
+            <label class="label w-14">
+              <span class="label-text">Surname</span>
+            </label>
+            <input type="text" placeholder="Surname" class="input input-bordered h-10 w-80">
+          </div>
+          <div class="row">
+            <div class="form-control float-left mt-2">
+              <label class="label w-24">
+                  <span class="label-text">Birth date</span>
+              </label>
+              <input type="text" placeholder="00/00/00" class="input input-bordered h-10 w-80"/>
+            
+            </div>
+            <div class="form-control float-left ml-6 mt-2">
+              <label class="label w-24">
+                <span class="label-text">Email address</span>
+              </label>
+              <input type="text" placeholder="Email address" class="input input-bordered h-10 w-80">
+            </div>
+            <div class="row">
+              <div class="form-control float-left mt-2 mb-5">
+                <label class="label w-24">
+                    <span class="label-text">Country</span>
+                </label>
+                <input type="text" placeholder="Country" class="input input-bordered h-10 w-80"/>
+              
+              </div>
+              <div class="form-control float-left ml-6 mt-2 mb-5">
+                <label class="label w-24">
+                  <span class="label-text">Address</span>
+                </label>
+                <input type="text" placeholder="Address" class="input input-bordered h-10 w-80">
+              </div>
+        </div>
+          <div class="form-control m-auto w-56">
+            <button class="btn btn-primary">Save editions</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

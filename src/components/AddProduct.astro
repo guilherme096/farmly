@@ -1,0 +1,65 @@
+<!-- The button to open modal -->
+<label for="AddProduct" class="btn">Add Product</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="AddProduct" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box max-w-5xl" style="width: 740px; height: 840px;">
+    <div>
+        <label for="AddProduct" class="btn btn-sm btn-circle absolute right-6 top-6">x</label>
+    </div>
+    <div>
+        <div class="form-control m-auto">
+            <input class="w-40 h-40" type="button" style="border-radius: 50%; border-color: black; border-width: 1px; margin: auto;">
+            <button class="btn btn-primary text-xs w-36 m-auto mt-3" style="height: 10px; border-radius: 20px;">Change photo</button>
+        </div>
+
+        
+      <hr class="bg-lime-800 mt-4 mb-1">
+    </div>
+    <div class="row">
+        <div class="form-control float-left ml-5">
+            <label class="label w-36">
+                <span class="label-text">Product's Name</span>
+            </label>
+            <input type="text" placeholder="Product's Name" class="input input-bordered h-10" style="width: 650px;"/>
+          
+          </div>
+    </div>
+    <div class="row">
+        <div>
+          <div class="form-control float-left ml-5 mt-2">
+            <label class="label w-40">
+                <span class="label-text">Price (per kilogram)</span>
+            </label>
+            <input type="text" placeholder="Price" class="input input-bordered h-10 w-44"/>
+          
+          </div>
+          <div class="form-control float-left ml-32 mt-2">
+            <label class="label w-40">
+              <span class="label-text">Weight</span>
+            </label>
+            <input type="text" placeholder="Weight" class="input input-bordered h-10 w-44">
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-control float-left ml-5 mt-2 mb-4">
+            <label class="label w-32">
+                <span class="label-text">Description</span>
+            </label>
+            <textarea class="textarea-bordered" placeholder="You can describe your product here" style="height: 150px; width: 650px; border-color: lightslategray; border-width: 1px; border-radius: 10px;"></textarea>
+
+        </div>
+
+        
+    </div>
+    
+
+
+    
+    <div class="form-control m-auto w-56">
+        <button class="btn btn-primary">Add Product</button>
+    </div>
+  </div>
+</div>

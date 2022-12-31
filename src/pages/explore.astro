@@ -4,12 +4,15 @@ import ModalCard from "../components/ModalCard.astro";
 import ProductModal from "../components/ProductModal.astro";
 import { SideBarFilter } from "../components/SideBarFilter";
 import Page from "../layout/Page.astro"
+import Settings from "../components/Settings.astro";
+import AddProduct from "../components/AddProduct.astro";
 ---
 
 <Page type='complete'>
     <ItemCard/>
-    <ModalCard/>
+    <Settings/>
     <label for="product-modal" class="btn">open modal</label>
     <ProductModal/>
+    <AddProduct/>
     <SideBarFilter/>
 </Page>

@@ -41,7 +41,7 @@ export const CompleteNav = () => {
                             <span className="badge">New</span>
                         </a>
                     </li>
-                    <li><a>Settings</a></li>
+                    <li><a href="/Settings">Settings</a></li>
                     <li><a>Logout</a></li>
                 </ul>
             </div>
