@@ -34,7 +34,7 @@ export const CartModal = () => {
             setTotals({
                 subtotal: (totals.subtotal + (item.price * item.qnty)),
                 shippingTotal: shipping,
-                total: (totals.subtotal + shipping)
+                total: (totals.subtotal + (item.price * item.qnty) + shipping)
             })
         }, this)
     }
