@@ -2,8 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { CartModal } from '../CartModal.jsx'
 import { useEffect, useState } from "react"
-import { checkAuth, getUser } from "../../utils/authenticationHelper.js"
-import { currentUser } from "../../utils/logOut.js"
+import { checkAuth, getUser, logOutUser } from "../../utils/authenticationHelper.js"
 
 export const CompleteNav = () => {
     const [authed, setAuthed] = useState(checkAuth());
@@ -14,7 +13,7 @@ export const CompleteNav = () => {
         }
     }, [authed])
     const logOut = () => {
-        currentUser();
+        logOutUser();
         setAuthed(false);
         setUser(null);
     }
@@ -60,7 +59,7 @@ export const CompleteNav = () => {
                     <li><a>Settings</a></li>
                     <li><a onClick={()=>logOut()}>Logout</a></li>
                 </ul>
-            </div> : <button className="btn btn-primary ml-auto w-32">Login</button>}
+            </div> : <a className="btn btn-primary ml-auto w-32" href="/">Login</a>}
         </div>
         <CartModal />
     </div>)
