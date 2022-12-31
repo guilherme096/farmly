@@ -29,3 +29,10 @@ export const getUser = () => {
     }
     return null
 }
+
+export const logOutUser = () => {
+    const user = localStorage.getItem('currentUser');
+    if (user) {
+        localStorage.removeItem('currentUser');
+    } 
+}

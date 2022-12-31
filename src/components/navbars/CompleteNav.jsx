@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { CartModal } from '../CartModal.jsx'
 import { useEffect, useState } from "react"
-import { checkAuth, getUser } from "../../utils/authenticationHelper.js"
 import { getCartCount } from "../../utils/buyHelper.js"
+import { checkAuth, getUser, logOutUser } from "../../utils/authenticationHelper.js"
 export const CompleteNav = () => {
     const [authed, setAuthed] = useState(checkAuth());
     const [user, setUser] = useState(null);
@@ -12,6 +12,11 @@ export const CompleteNav = () => {
             setUser(getUser());
         }
     }, [authed])
+    const logOut = () => {
+        logOutUser();
+        setAuthed(false);
+        setUser(null);
+    }
     return (<div className="navbar bg-base-100 h-20 flex flex-row p-0 align-middle px-3">
         <a className="w-fit mr-8 h-20 shrink-0" href="/explore">
             <img src="/icons/farmly_black.svg" alt="" className="h-20" />
@@ -52,9 +57,9 @@ export const CompleteNav = () => {
                         </a>
                     </li>
                     <li><a>Settings</a></li>
-                    <li><a>Logout</a></li>
+                    <li><a onClick={()=>logOut()}>Logout</a></li>
                 </ul>
-            </div> : <button className="btn btn-primary ml-auto w-32">Login</button>}
+            </div> : <a className="btn btn-primary ml-auto w-32" href="/">Login</a>}
         </div>
         <CartModal />
     </div>)
