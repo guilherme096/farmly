@@ -9,6 +9,7 @@ export const loginUser = (email, password) => {
             cart: []
         }
         localStorage.setItem('currentUser', JSON.stringify(_user))
+        console.log(user)
         return true
     }
     return false
