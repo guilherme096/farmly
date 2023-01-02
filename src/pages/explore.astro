@@ -4,11 +4,16 @@ import ProductModal from "../components/ProductModal.astro";
 import { SideBarFilter } from "../components/SideBarFilter";
 import Page from "../layout/Page.astro";
 import data from '../globalData.json'
-
+import Settings from "../components/Settings.astro";
+import SetPass from "../components/SetPass.astro";
+import SetBil from "../components/SetBil.astro";
 const { products } = data;
 ---
 
-<Page type='complete' title="Explore - Farmly">
+<Page type='complete'>
+    <Settings />
+    <SetPass/>
+    <SetBil/>
     <SideBarFilter/>
     <div class="flex flex-row flex-wrap ml-80 mt-4">
         {products.map((product) => {
@@ -22,5 +27,5 @@ const { products } = data;
             _product.producer = data.producers.find((producer) => producer.id === product.producer);
             return <ItemCard product={_product}/>
         })}
-    </div>
+        </div>
 </Page>

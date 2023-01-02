@@ -1,5 +1,5 @@
 <!-- The button to open modal -->
-<label for="SetBil" class="btn">open modal</label>
+<label for="SetBil" class="btn">SetBil</label>
 
 <!-- Put this part before </body> tag -->
 <input type="checkbox" id="SetBil" class="modal-toggle" />
@@ -7,9 +7,16 @@
   <div class="modal-box w-11/12 max-w-5xl" style="height: 600px;">
     <div class="h-full float-left bg-lime-900 ml-0">
       <ul class="menu w-60">
-          <li class="mt-8 bg-white mb-0.5"><a href="/Settings">Account</a></li>
-          <li class="bg-white mb-0.5"><a href="/SetPass">Password</a></li>
-          <li class="bg-white mb-0.5"><a href="/SetBil">Billing</a></li>
+        <li class="mt-8 bg-white mb-0.5 border-lime-900"><a href="/Settings">
+          <img src="https://s3-alpha-sig.figma.com/img/7639/32fb/9009b35f6c64d6b4fdb5328599b7338c?Expires=1673222400&Signature=AH5FFQ9KbE6TzGl9sZQAEUEeqlnqkuod74Mcch5Zp6azVboGKm7Zh~xI~A8yxmoKTwJXVfalEbLO00uvYf-3x~HINILJJHStaSaijuUym7TczpI6wB5umDs2NRc6g7DCiZHcvfISTMqVK~Nlu59cVDqAmvT275jh~M0xv532impjcUaJA31vazl6CRf2Gq05QR6JfNVGNOF4CLX-42ji~M8AQX8DQ2u4-pin4oHP2RZSJoFMTOS3I9Xr8y7a8CVCwqimcAiKxLskTQIrXRmyQWBPiVRGFdw2Ps-P0Z4Aaz4IGBXDiF0ZQ9Ga-3I6jxHPbruV9VNdXwx89~f5lvGREA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="account" style="height: 30px; width: 30px; border-radius: 50%; border-color: black; border-width: 1px;">
+          Account
+        </a></li>
+        <li class="bg-white mb-0.5 border-lime-900"><a href="/SetPass">
+          <img src="https://s3-alpha-sig.figma.com/img/786b/7ba5/1c3358b56409af325f56e1df661caf72?Expires=1673222400&Signature=g7leI0ELoBCSifkt1s3bpNGQOfi3NlYi1MCmK34vuyTZBxOpoGjUIujm1ap5lzV18DFBfqmRSxuzPf4U1d13-lfHiFLnrGK-QdParGOhRUZ39YFyykRyzaZfk6CE8ScxF4aLOjC0qus4XPbkqbDV8NK5CbB7VGQGOfFRE09j9ifLk08tZ15NOWh0-0kDHwSvQlqbCj89DTpxB3me~j~SXMjBfnyuxCg3iQ8ffpnTspGYpIQApHW3ymnTKpm~v2M3RVNTJbaK-5Q8BQo29BIDBJx8Y0vMCUqXAEX0Im-wNu9ARMul5co0DHi45iJdGVf3peqYvQYJ7VReZahYo6dHaQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="password" style="height: 30px; width: 30px; border-radius: 50%; border-color: black; border-width: 1px;">
+          Password</a></li>
+        <li class="bg-white mb-0.5 border-lime-900"><a href="/SetBil">
+          <img src="https://s3-alpha-sig.figma.com/img/f2c1/f147/6082c0bc7190e74eecfec48a2b408890?Expires=1673222400&Signature=NZAA6xZR~8fRokW9WdoBYjBm-eoKnYC4PWSmlFI10GCYri0dAuMwh1vlH6uDDmxSj6Ix8psIdf2AhzGh4OuwOioEopB7v-pTLcW-5Eks~neSkxC1fy8kcKfcDd~XMPNxX-4PrOidI4e3Zrj82E9q9a~s1fkcxM2QpRLaJjaL4n~EohqB1n42iyoOCn-WJ7NZgCu8AZ5TvSj02APPrUfFoWuMFxTHwaL09DMyalBS36DqcG1DG1OA~wZJuvryPNAe7fMK8xrYMXEQESf1hp~F198xiJy9xXRNq~5kXCy4AlR5un1gCXdE~qnakT72WxGdE0deNED0xGjWFKY3Dc0YWg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="biling" style="height: 30px; width: 30px; border-radius: 50%; border-color: black; border-width: 1px;">
+          Billing</a></li>
         </ul>
       </div>
     <div class="ml-64">
@@ -20,49 +27,29 @@
 
     <div class="ml-64">
       <div class="ml-3 mt-3">
-        <h1 class="font-bold text-xl mb-2">Account</h1>
+        <h1 class="font-bold text-xl mb-2">Billing</h1>
         <div class="row">
           <div class="form-control float-left">
-            <label class="label w-14">
-                <span class="label-text">Name</span>
+            <label class="label w-36">
+                <span class="label-text">Form of payment</span>
             </label>
-            <input type="text" placeholder="Name" class="input input-bordered h-14 w-80"/>
+            <input type="text" placeholder="Form of payment" class="input input-bordered h-14" style="width: 600px;"/>
           
           </div>
-          <div class="form-control float-left ml-6">
+          <div class="form-control float-left">
             <label class="label w-14">
-              <span class="label-text">Surname</span>
+              <span class="label-text">Iban</span>
             </label>
-            <input type="text" placeholder="Surname" class="input input-bordered h-14 w-80">
+            <input type="text" placeholder="Iban" class="input input-bordered h-14" style="width: 600px;">
           </div>
           <div class="row">
-            <div class="form-control float-left mt-2">
+            <div class="form-control float-left mt-2 mb-6">
               <label class="label w-24">
-                  <span class="label-text">Birth date</span>
+                  <span class="label-text">Address</span>
               </label>
-              <input type="text" placeholder="00/00/00" class="input input-bordered h-14 w-80"/>
+              <input type="text" placeholder="Address" class="input input-bordered h-14" style="width: 600px;"/>
             
             </div>
-            <div class="form-control float-left ml-6 mt-2">
-              <label class="label w-24">
-                <span class="label-text">Email address</span>
-              </label>
-              <input type="text" placeholder="Email address" class="input input-bordered h-14 w-80">
-            </div>
-            <div class="row">
-              <div class="form-control float-left mt-2 mb-10">
-                <label class="label w-24">
-                    <span class="label-text">Country</span>
-                </label>
-                <input type="text" placeholder="Country" class="input input-bordered h-14 w-80"/>
-              
-              </div>
-              <div class="form-control float-left ml-6 mt-2 mb-10">
-                <label class="label w-24">
-                  <span class="label-text">Address</span>
-                </label>
-                <input type="text" placeholder="Address" class="input input-bordered h-14 w-80">
-              </div>
         </div>
           <div class="form-control m-auto w-56">
             <button class="btn btn-primary">Save editions</button>
@@ -71,5 +58,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>
