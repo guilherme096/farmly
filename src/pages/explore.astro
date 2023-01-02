@@ -4,6 +4,7 @@ import ProductModal from "../components/ProductModal.astro";
 import { SideBarFilter } from "../components/SideBarFilter";
 import Page from "../layout/Page.astro";
 import data from '../globalData.json'
+import CheckoutModal from "../components/CheckoutModal.astro";
 
 const { products } = data;
 ---
@@ -23,4 +24,5 @@ const { products } = data;
             return <ItemCard product={_product}/>
         })}
     </div>
+    <CheckoutModal/>
 </Page>

@@ -73,7 +73,7 @@ export const CartModal = () => {
                         </div>
                         <div className="w-full flex flex-row mt-4 mx-auto align-middle">
                             <button className="btn btn-primary btn-outline w-1/2">Edit shipping/payment information</button>
-                            <button className="btn btn-primary w-1/2">Complete Order</button>
+                            <label for="my-modal" className="btn btn-primary w-1/2">Checkout</label>
                         </div>
                     </div>
                 </div>
