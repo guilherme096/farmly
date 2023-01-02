@@ -7,10 +7,15 @@ import data from '../globalData.json'
 import Settings from "../components/Settings.astro";
 import SetPass from "../components/SetPass.astro";
 import SetBil from "../components/SetBil.astro";
+import AddProduct from "../components/AddProduct.astro";
+import RePr from "../components/RePr.astro";
+
+
 const { products } = data;
 ---
 
 <Page type='complete'>
+    <RePr/>
     <Settings />
     <SetPass/>
     <SetBil/>
