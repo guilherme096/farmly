@@ -1,0 +1,15 @@
+---
+import { AddProduct } from "../components/AddProduct";
+import ProdProduct from "../components/ProdProduct.astro";
+import Page from "../layout/Page.astro";
+import {AddProdModal} from "../components/AddProdModal.jsx";
+---
+
+<Page type="prod" title="Dahsboard - Farmly">
+    <div class="mt-4 px-4">
+        <div class="flex flex-wrap">
+            <AddProduct />
+        </div>
+    </div>
+    <AddProdModal addProduct="addProduct"/>
+</Page>

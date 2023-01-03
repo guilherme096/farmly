@@ -1,8 +1,7 @@
-import buyHelper from "../utils/buyHelper";
+
 
 export const CheckoutModal = () => {
   const clearCart = () => {
-    buyHelper.clearCart();
   };
   return (
     <>
