@@ -4,7 +4,7 @@ export const AddProdModal = (props)=>{
     <input type="checkbox" id="my-modal" class="modal-toggle" />
     <div class="modal">
         <div class="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-            <label for="my-modal" class="btn btn-sm btn-circle absolute right-2 top-2" onClick={props.addProduct}>✕</label>
+            <label for="my-modal" class="btn btn-sm btn-circle absolute right-2 top-2" onClick={()=>props.addProduct()}>✕</label>
             <div class="card-body">
                 <div class="form-control">
                     <label class="label">
