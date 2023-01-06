@@ -33,6 +33,14 @@ export const removeItemFromCart = (item) => {
     }
 }
 
+export const clearCart = () => {
+    const user = getUser()
+    if (user) {
+        user.cart = []
+        localStorage.setItem('currentUser', JSON.stringify(user))
+    }
+}
+
 export const getCartCount = () => {
     const user = getUser()
     if (user) {

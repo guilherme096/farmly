@@ -42,7 +42,7 @@ export const CompleteNav = () => {
                     <li className="px-2"><a>Orders</a></li>
                 </ul>
             </div>
-            <button className="btn btn-primary btn-outline ml-auto">Become a seller</button>
+            <a className="btn btn-primary btn-outline ml-auto" href="//prodDash">Become a seller</a>
             {authed && user ? <div className="dropdown dropdown-end ml-8">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-12 rounded-full">

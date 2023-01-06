@@ -1,0 +1,19 @@
+---
+import ProductModal from "./ProductModal.astro";
+
+const { product } = Astro.props;
+// console log every property in product
+---
+
+<>
+  <label class="card bg-base-96 m-4 shadow-xl w-80" for={""}>
+    <figure>
+        <img src={product.image} class="h-[180px] object-cover w-full" />
+      </figure>
+      <div class="flex flex-row justify-between p-4 h-16">
+        <div class="text-lg">{product.name}</div>
+        <div class="text-lg">{product.price}€</div>
+      </div>
+  </label>
+  <ProductModal product={product}/>
+</>

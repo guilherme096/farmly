@@ -1,9 +1,10 @@
 ---
 import { CompleteNav } from "../components/navbars/CompleteNav.jsx";
+import ProdNav from "../components/navbars/ProdNav.astro";
 import SimpleNav from "../components/navbars/SimpleNav.astro";
 
 interface Props {
-    type: "complete" | "simple",
+    type: "complete" | "simple" | "prod",
     title: string,
 }
 
@@ -19,7 +20,7 @@ const { type, title } = Astro.props
     <title>{title}</title>
 </head>
 <body>
-    {type === "complete" ? <CompleteNav client:only/> : <SimpleNav/>}
+    {type === "complete" ? <CompleteNav client:only/> : type=== "simple" ? <SimpleNav/> : <ProdNav/>}
     <slot/>
 </body>
 </html>
